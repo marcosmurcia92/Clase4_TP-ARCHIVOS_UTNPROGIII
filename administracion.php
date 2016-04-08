@@ -16,12 +16,24 @@
 		($dni == "") || ($legajo == "") || ($sueldo == "");
 		if($emptyCheck){
 			echo "SE HA INGRESADO UN DATO VACIO";
-		}else{
-			$emp = new Empleado($nombre,$apellido,$dni,$sexo,$legajo,$sueldo);
-			echo "EMPLEADO INGRESADO EXITOSAMENTE: <br>".$emp->ToString();
-		}
 			echo "<br>";
 			echo "<a href=\"indexParte2.php\">VOLVER ATRAS</a>";
+		}else{
+			$emp = new Empleado($nombre,$apellido,$dni,$sexo,$legajo,$sueldo);
+			echo "EMPLEADO INGRESADO EXITOSAMENTE: <br>".$emp->ToString()."<br>";
+			$archivo=fopen("Empleados.txt", "a");
+			$res = fwrite($archivo, $emp->ToString()."\r\n");
+			fclose($archivo);
+			if($res == false){
+				echo "ERROR AL ESCRIBIR EL ARCHIVO DE REGISTRO!";
+				echo "<br>";
+				echo "<a href=\"indexParte2.php\">VOLVER ATRAS</a>";
+			}else{
+				echo "EMPLEADO REGISTRADO CON EXITO EN EL ARCHIVO!";
+				echo "<br>";	
+				echo "<a href=\"mostrar.php\">MOSTRAR REGISTRO</a>";
+			}
+		}
 	 ?>
 </body>
 </html>
