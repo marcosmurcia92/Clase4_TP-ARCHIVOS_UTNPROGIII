@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title></title>
+	<title>Prueba de Clases</title>
 </head>
 <body>
 	<?php 
