@@ -13,19 +13,19 @@
 		}
 
 		function getApellido(){
-			return $_apellido;
+			return $this->_apellido;
 		}
 
 		function getDni(){
-			return $_dni;
+			return $this->_dni;
 		}
 
 		function getNombre(){
-			return $_nombre;
+			return $this->_nombre;
 		}
 
 		function getSexo(){
-			return $_sexo;
+			return $this->_sexo;
 		}
 
 		function Hablar($idioma){
@@ -33,9 +33,9 @@
 		}
 
 		function ToString(){
-			return "Nombre: ".$_nombre.
-					" - Apellido: ".$_apellido." - Dni: ".
-					$_dni." - Sexo: ".$_sexo;
+			return "Nombre: ".$this->_nombre.
+					" - Apellido: ".$this->_apellido." - Dni: ".
+					$this->_dni." - Sexo: ".$this->_sexo;
 		}
 	}
 

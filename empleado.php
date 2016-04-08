@@ -1,4 +1,5 @@
 <?php 
+	include "persona.php";
 	class Empleado extends Persona{
 		protected $_legajo = 0;
 		protected $_sueldo = 0;
@@ -10,11 +11,11 @@
 		}
 
 		function getLegajo(){
-			return $_legajo;
+			return $this->_legajo;
 		}
 
 		function getSueldo(){
-			return $_sueldo;
+			return $this->_sueldo;
 		}
 
 		function Hablar($idioma){
@@ -23,8 +24,8 @@
 
 		function ToString(){
 			return parent::ToString()." - ".
-					"Legajo: ".$_legajo." - ".
-					"Sueldo: $".$_sueldo;
+					"Legajo: ".$this->_legajo." - ".
+					"Sueldo: $".$this->_sueldo;
 		}
 	}
  ?>
