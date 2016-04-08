@@ -33,9 +33,9 @@
 		}
 
 		function ToString(){
-			return "Nombre: ".$_nombre."<br>".
-					"Apellido: ".$_apellido."<br>".
-					"Dni: ".$_dni." | Sexo: ".$_sexo;
+			return "Nombre: ".$_nombre.
+					" - Apellido: ".$_apellido." - Dni: ".
+					$_dni." - Sexo: ".$_sexo;
 		}
 	}
 
