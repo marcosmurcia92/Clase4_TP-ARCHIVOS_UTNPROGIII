@@ -18,6 +18,7 @@
 		</select>
 		<input type="text" name="Legajo" placeholder="Nº de Legajo del Empleado"><br>
 		<input type="text" name="Sueldo" placeholder="Sueldo del Empleado"><br>
+		<input type="text" name="ImgURL" placeholder="URL de Foto del Empleado"><br>
 		<input class="MiBotonUTN animated flipInY" type="Submit" name="Ingresar" value="Enviar Datos">
 	</form>
 	</div>

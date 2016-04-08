@@ -34,8 +34,8 @@
 
 		function ToString(){
 			return $this->_nombre.
-					" - ".$this->_apellido." -  ".
-					$this->_dni." -  ".$this->_sexo;
+					" | ".$this->_apellido." |  ".
+					$this->_dni." | ".$this->_sexo;
 		}
 	}
 
