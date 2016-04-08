@@ -33,9 +33,9 @@
 		}
 
 		function ToString(){
-			return "Nombre: ".$this->_nombre.
-					" - Apellido: ".$this->_apellido." - Dni: ".
-					$this->_dni." - Sexo: ".$this->_sexo;
+			return $this->_nombre.
+					" - ".$this->_apellido." -  ".
+					$this->_dni." -  ".$this->_sexo;
 		}
 	}
 

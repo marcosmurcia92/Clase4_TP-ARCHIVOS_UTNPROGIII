@@ -24,8 +24,8 @@
 
 		function ToString(){
 			return parent::ToString()." - ".
-					"Legajo: ".$this->_legajo." - ".
-					"Sueldo: $".$this->_sueldo;
+					$this->_legajo." - ".
+					$this->_sueldo;
 		}
 	}
  ?>

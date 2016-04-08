@@ -1,1 +1,2 @@
-Nombre: Pepe - Apellido: Gonzales - Dni: 3454342 - Sexo: M - Legajo: 77668 - Sueldo: $23000
+Pepe - Gonzales - 3454342 - M - 77668 - 23000
+Agustina - Lopez - 132435 - F - 112211 - 8500
