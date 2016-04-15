@@ -49,7 +49,7 @@
 			$emp = new Empleado($nombre,$apellido,$dni,$sexo,$legajo,$sueldo);
 			$emp->setPathFoto($img);
 			echo "EMPLEADO INGRESADO EXITOSAMENTE: <br>".$emp->ToString()."<br>";
-			$miFabrica->AgregarEmpleado($emp);
+			$miFabrica->AgregarEmpleados($emp);
 			if(Fabrica::Guardar($miFabrica)){
 				echo "FABRICA REGISTRADA CON EXITO EN EL ARCHIVO!";
 				echo "<br>";	

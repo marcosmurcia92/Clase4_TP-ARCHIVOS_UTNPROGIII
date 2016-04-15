@@ -1,3 +1,7 @@
-Pepe | Murcia |  132435 | M | 121223 | 45000 | http://www.impulsio.com.ar/wp-content/uploads/2015/09/empleado-seguro-gr.jpg
-Juan | Fagorr |  343434 | M | 77668 | 45000 | http://static.cnnexpansion.com/photos/2008/05/01/un-empleado-que-lo-merece-debe-ser-reconocido-siempre-archivo.2008-05-04.2267279125.jpg
-Marcos | Olmedo |  3344424242 | M | 123123 | 12333 | http://gloinjob.com/assets/Custom-Icon/Employer.png
+Pepe  |  Murcia  |    132435  |  M  |  121223  |  45000  |  http://www.impulsio.com.ar/wp-content/uploads/2015/09/empleado-seguro-gr.jpg
+
+Juan  |  Fagorr  |    343434  |  M  |  77668  |  45000  |  http://static.cnnexpansion.com/photos/2008/05/01/un-empleado-que-lo-merece-debe-ser-reconocido-siempre-archivo.2008-05-04.2267279125.jpg
+
+Marcos  |  Olmedo  |    3344424242  |  M  |  123123  |  12333  |  http://gloinjob.com/assets/Custom-Icon/Employer.png
+
+Gonzalo | Juarez |  667788 | M | 24241 | 56000 | http://s3.amazonaws.com/media.eremedia.com/uploads/2011/04/21225117/employeeengagement.png

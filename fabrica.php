@@ -6,7 +6,7 @@
 		function __construct($razonSocial){
 			$this->_razonSocial = $razonSocial;
 			$this->_empleados = array();
-			ObtenerEmpleadosTxt();
+			$this->ObtenerEmpleadosTxt();
 		}
 
 		function AgregarEmpleados(Empleado $persona){
@@ -54,7 +54,9 @@
 			while (!feof($archivo)) {
 				$linea=fgets($archivo);
 				$dataEmp=explode('|', $linea);
-				if($dataEmp[0]!=""){
+				//var_dump($dataEmp);
+				//echo "<br>";
+				if(trim($dataEmp[0])!=""){
 					$emp = new Empleado($dataEmp[0],$dataEmp[1],$dataEmp[2],
 						$dataEmp[3],$dataEmp[4],$dataEmp[5]);
 					$emp->setPathFoto($dataEmp[6]);
