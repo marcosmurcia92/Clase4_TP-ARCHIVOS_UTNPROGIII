@@ -6,6 +6,7 @@
 		function __construct($razonSocial){
 			$this->_razonSocial = $razonSocial;
 			$this->_empleados = array();
+			ObtenerEmpleadosTxt();
 		}
 
 		function AgregarEmpleados(Empleado $persona){
@@ -33,6 +34,38 @@
 
 		private function EliminarEmpleadosRepetidos(){
 			$this->_empleados = array_unique($this->_empleados,SORT_REGULAR);
+		}
+
+		static function Guardar($f){
+			$archivo=fopen("Empleados.txt", "w");
+			foreach ($f->_empleados as $empK => $empV) {
+				$res = fwrite($archivo, $empV->ToString()."\r\n");
+				if($res == false){
+					fclose($archivo);
+					return false;
+				}
+			}
+			fclose($archivo);
+			return true;
+		}
+
+		private function ObtenerEmpleadosTxt(){
+			$archivo=fopen("Empleados.txt", "r");
+			while (!feof($archivo)) {
+				$linea=fgets($archivo);
+				$dataEmp=explode('|', $linea);
+				if($dataEmp[0]!=""){
+					$emp = new Empleado($dataEmp[0],$dataEmp[1],$dataEmp[2],
+						$dataEmp[3],$dataEmp[4],$dataEmp[5]);
+					$emp->setPathFoto($dataEmp[6]);
+					$this->AgregarEmpleados($emp);
+				}
+			}
+			fclose($archivo);
+		}
+
+		function ToArray(){
+			return $this->_empleados;
 		}
 
 		function ToString(){

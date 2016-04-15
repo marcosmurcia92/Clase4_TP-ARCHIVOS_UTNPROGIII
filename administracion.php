@@ -5,7 +5,9 @@
 <body>
 	<?php 
 		include "empleado.php";
+		include "fabrica.php";
 		$absPath = getcwd();
+		$miFabrica = new Fabrica("UTN Empleados S.A.");
 		$apellido = $_POST['Apellido'];
 		$nombre = $_POST['Nombre'];
 		$dni = $_POST['Dni'];
@@ -47,18 +49,28 @@
 			$emp = new Empleado($nombre,$apellido,$dni,$sexo,$legajo,$sueldo);
 			$emp->setPathFoto($img);
 			echo "EMPLEADO INGRESADO EXITOSAMENTE: <br>".$emp->ToString()."<br>";
-			$archivo=fopen("Empleados.txt", "a");
-			$res = fwrite($archivo, $emp->ToString()."\r\n");
-			fclose($archivo);
-			if($res == false){
+			$miFabrica->AgregarEmpleado($emp);
+			if(Fabrica::Guardar($miFabrica)){
+				echo "FABRICA REGISTRADA CON EXITO EN EL ARCHIVO!";
+				echo "<br>";	
+				echo "<a href=\"mostrar.php\">MOSTRAR REGISTRO</a>";
+			}else{
 				echo "ERROR AL ESCRIBIR EL ARCHIVO DE REGISTRO!";
 				echo "<br>";
 				echo "<a href=\"indexParte2.php\">VOLVER ATRAS</a>";
-			}else{
-				echo "EMPLEADO REGISTRADO CON EXITO EN EL ARCHIVO!";
-				echo "<br>";	
-				echo "<a href=\"mostrar.php\">MOSTRAR REGISTRO</a>";
 			}
+			// $archivo=fopen("Empleados.txt", "a");
+			// $res = fwrite($archivo, $emp->ToString()."\r\n");
+			// fclose($archivo);
+			// if($res == false){
+			// 	echo "ERROR AL ESCRIBIR EL ARCHIVO DE REGISTRO!";
+			// 	echo "<br>";
+			// 	echo "<a href=\"indexParte2.php\">VOLVER ATRAS</a>";
+			// }else{
+			// 	echo "EMPLEADO REGISTRADO CON EXITO EN EL ARCHIVO!";
+			// 	echo "<br>";	
+			// 	echo "<a href=\"mostrar.php\">MOSTRAR REGISTRO</a>";
+			// }
 		}
 	 ?>
 </body>
