@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>Mostrar Registro</title>
+	<script type="text/javascript" src="Funciones.js"></script>
 </head>
 <body>
 <?php 
@@ -16,7 +17,8 @@
 		<th>Dni</th>
 		<th>Legajo</th>
 		<th>Sueldo</th>
-		<th>Foto</th>";
+		<th>Foto</th>
+		<th>Acción</th>";
 	foreach ($arrayFabrica as $empK => $empV) {
 		echo "<tr>";
 		echo "<td>".$empV->getApellido()."</td>".
@@ -25,7 +27,15 @@
 			"<td>".$empV->getDni()."</td>".
 			"<td>".$empV->getLegajo()."</td>".
 			"<td>".$empV->getSueldo()."</td>".
-			"<td><img src=".$empV->getPathFoto()." width=100 height=100></td>";
+			"<td><img src=".$empV->getPathFoto()." width=100 height=100></td>".
+			"<td>
+				<input type=\"Button\" name=\"Eliminar\" 
+				id=\"btnEliminar\" onclick=\"eliminarEmpleado(".$empV->getLegajo().")\" 
+				value=\"Eliminar\">
+				<input type=\"Button\" name=\"Modificar\" 
+				id=\"btnModificar\" onclick=\"modificarEmpleado(".$empV->getLegajo().")\" 
+				value=\"Modificar\">
+			</td>";
 		echo "</tr>";
 	}
 	// $archivo=fopen("Empleados.txt", "r");

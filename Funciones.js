@@ -64,3 +64,11 @@ function MostrarErrores(arrayIdsErrores){
 	}
 
 }
+
+function eliminarEmpleado(legajoEliminar){
+	alert("ELIMINAR A "+legajoEliminar);
+}
+
+function modificarEmpleado(legajoModificar){
+	alert("MODIFICAR A "+legajoModificar);
+}
