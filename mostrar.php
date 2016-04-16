@@ -4,6 +4,15 @@
 	<script type="text/javascript" src="Funciones.js"></script>
 </head>
 <body>
+	<form id="frmEliminar" action="administracion.php" method="POST">
+		<input type="hidden" name="Legajo" id="legajoEliminar" value="">
+		<input type="hidden" name="Eliminar" value="Eliminar">
+	</form>
+
+	<form id="frmModificar" action="indexParte2.php" method="POST">
+		<input type="hidden" name="Legajo" id="legajoMod" value="">
+		<input type="hidden" name="Modificar" value="Modificar">
+	</form>
 <?php 
 	include "empleado.php";
 	include "fabrica.php";

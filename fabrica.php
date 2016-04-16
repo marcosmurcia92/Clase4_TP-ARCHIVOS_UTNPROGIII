@@ -24,8 +24,17 @@
 
 		function EliminarEmpleado(Empleado $persona){
 			foreach ($this->_empleados as $empK => $empV) {
-				if($empV->getDni() == $persona->getDni()){
+				if(trim($empV->getLegajo()) == trim($persona->getLegajo())){
 					unset($this->_empleados[$empK]);
+					return true;
+				}
+			}
+			return false;
+		}
+
+		function ExisteEmpleado(Empleado $persona){
+			foreach ($this->_empleados as $empK => $empV) {
+				if(trim($empV->getLegajo()) == trim($persona->getLegajo())){
 					return true;
 				}
 			}

@@ -66,9 +66,15 @@ function MostrarErrores(arrayIdsErrores){
 }
 
 function eliminarEmpleado(legajoEliminar){
-	alert("ELIMINAR A "+legajoEliminar);
+	//alert("ELIMINAR A "+legajoEliminar);
+	if(confirm("Esta Seguro que quiere eliminar este legajo? ("+legajoEliminar+")")){
+		document.getElementById('legajoEliminar').value = legajoEliminar;
+		document.forms['frmEliminar'].submit();
+	}
 }
 
 function modificarEmpleado(legajoModificar){
-	alert("MODIFICAR A "+legajoModificar);
+	//alert("MODIFICAR A "+legajoModificar);
+	document.getElementById('legajoMod').value = legajoModificar;
+	document.forms['frmModificar'].submit();
 }
